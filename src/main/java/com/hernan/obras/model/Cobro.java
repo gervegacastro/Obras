@@ -16,12 +16,6 @@ public class Cobro {
     private LocalDate fecha;
     private int monto;
 
-    @ManyToOne
-    @JoinColumn (name = "obra", referencedColumnName = "id")
-    private Obra obra;
 
-    @ManyToOne
-    @JoinColumn (name = "cliente", referencedColumnName = "id")
-    private Cliente cliente;
 
 }

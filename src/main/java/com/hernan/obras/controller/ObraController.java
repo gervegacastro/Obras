@@ -39,7 +39,7 @@ public class ObraController {
     }
 
     @DeleteMapping ("/{id}")
-    public String delete (Long id) {
+    public String delete (@PathVariable Long id) {
         if (id == null){
             return "El objeto no se ha encontrado";
         }

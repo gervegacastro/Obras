@@ -20,10 +20,6 @@ public class Obra {
     private int cantidadMetrosExtraer;
 
 
-    @ManyToOne
-    @JoinColumn (name = "cliente", referencedColumnName = "id")
-    private Cliente cliente;
-
     @ManyToMany
     @JoinTable (
             name = "obra_camion",
@@ -33,9 +29,11 @@ public class Obra {
     @JoinColumn (name = "camion_id", referencedColumnName = "id")
     private List<Camion> camiones;
 
-    @OneToMany (mappedBy = "obra")
+    @OneToMany
+    @JoinColumn (name = "obra_id", referencedColumnName = "id")
     private List<Pago> pagos;
 
-    @OneToMany (mappedBy = "obra")
+    @OneToMany
+    @JoinColumn (name = "obra_id", referencedColumnName = "id")
     private List<Cobro> cobros;
 }

@@ -16,10 +16,6 @@ public class Camion {
     private String patente;
     private int capacidadCarga;
 
-    @ManyToOne
-    @JoinColumn (name = "titular", referencedColumnName = "id")
-    private Titular titular;
-
     @ManyToMany (mappedBy = "camiones")
     private List<Obra> obras;
 }

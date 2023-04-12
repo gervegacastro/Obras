@@ -1,0 +1,4 @@
+FUNCIONES PARA AGREGAR
+
+- Titular add camión
+- Titular delete camión

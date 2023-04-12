@@ -16,12 +16,5 @@ public class Pago {
     private LocalDate fecha;
     public int monto;
 
-    @ManyToOne
-    @JoinColumn (name = "obra", referencedColumnName = "id")
-    public Obra obra;
-
-    @ManyToOne
-    @JoinColumn (name = "titular", referencedColumnName = "id")
-    private Titular titular;
 
 }

@@ -19,9 +19,11 @@ public class Titular {
     private Long celular;
     private String mail;
 
-    @OneToMany (mappedBy = "titular")
+    @OneToMany
+    @JoinColumn (name = "titular_id", referencedColumnName = "id")
     private List<Camion> camiones;
 
-    @OneToMany (mappedBy = "titular")
+    @OneToMany
+    @JoinColumn (name = "titular_id", referencedColumnName = "id")
     private List<Pago> pagos;
 }

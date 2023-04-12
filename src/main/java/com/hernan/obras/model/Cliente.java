@@ -19,10 +19,12 @@ public class Cliente {
     private String mail;
     private String dirección;
 
-    @OneToMany (mappedBy = "cliente")
+    @OneToMany
+    @JoinColumn (name = "cliente_id", referencedColumnName = "id")
     private List<Obra> obras;
 
-    @OneToMany (mappedBy = "cliente")
+    @OneToMany
+    @JoinColumn (name = "cliente_id", referencedColumnName = "id")
     private List<Cobro> cobros;
 
 
